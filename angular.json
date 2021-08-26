@@ -5,7 +5,17 @@
   "projects": {
     "angular-dashboardadmin": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -119,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-dashboardadmin"
+    }
+  },
+  "defaultProject": "angular-dashboardadmin",
+  "cli": {
+    "analytics": false
+  }
 }
